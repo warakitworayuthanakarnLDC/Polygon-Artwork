@@ -13,21 +13,23 @@ screen.setup(850, 600)
 screen.title("Student Animated Polygon Art")
 screen.bgcolor("black")
 screen.tracer(0) 
-artist = turtle.Turtle()
-artist.shape("arrow")
-artist.pencolor("black")
 
+
+artist = turtle.Turtle()
+artist.hideturtle()
 
 class polygon:
     def __init__(self,x, y, sides,pen_size,color,side_length,angle,pen):
-        self.x=x
-        self.y=y
-        self.sidelength=side_length
-        self.color=color
-        self.pensize=pen_size
-        self.sides=sides
-        self.angle=angle
-        self.pen=pen
+        self.x = x
+        self.y = y
+        self.sidelength = side_length
+        self.color = color
+        self.pensize = pen_size
+        self.sides = sides
+        self.angle = angle
+        self.pen = pen
+
+        #Instantiation
 
     def draw(self):
         i=0
@@ -41,28 +43,39 @@ class polygon:
             i+=1
         self.pen.penup()
 
+        #draw a polygon 3 to N sides
+
     def move_to(self,x,y):
         self.pen.teleport(x,y)
 
-rng = random.Random(24)
-colors = ["cyan", "springgreen", "orange", "deepskyblue", "plum", "yellow"]
+        #teleportation enderman
+
+rng = random.Random(12)
+colors = ["cyan", "springgreen", "orange", "deepskyblue", "plum", "yellow"] #allowed colours
 shapes = []
-for _ in range(1):
+
+for i in range(12):
     x = rng.randint(-290, 210)
     y = rng.randint(-170, 120)
-    shape = polygon(x, y, rng.randint(3, 6), rng.randint(35, 105),rng.choice(colors), rng.randint(1, 6), rng.randint(0, 359),artist)
-    shape.draw()
-    artist.teleport(x,y)
-    shapes.append((shape, x, y, rng.random() * 6.28))
+    sides = rng.randint(3, 6)
+    pen_size = rng.randint(1, 6)
+    color = rng.choice(colors)
+    side_length = rng.randint(35, 105)
+    angle = rng.randint(0, 359)
+    
+    shape = polygon(x, y, sides, pen_size, color, side_length, angle, artist) #create shape object
+    shapes.append((shape, x, y, rng.random() * 6.28)) #append shape object into a list
 
-for frame in range(10000):
-    artist.clear()
-    for shape, home_x, home_y, phase in shapes:
-        x = home_x + 32 * math.cos(frame * 0.07 + phase)
+for frame in range(10000): #10000 ticks
+    artist.clear() #clear the board for the next frame operation
+
+    for shape, home_x, home_y, phase in shapes: # loop through the list of shapes
+        x = home_x + 32 * math.cos(frame * 0.07 + phase) # apply a movement to it on x and y axis
         y = home_y + 23 * math.sin(frame * 0.07 + phase)
-        shape.move_to(x, y) 
-        shape.draw()
-    screen.update()
-    time.sleep(0.045) 
+        shape.move_to(x, y) # teleport to the desired location set in list  
+        shape.draw() #draw the shape
+
+    screen.update() # update the frame
+    time.sleep(0.045) #delay
 
 screen.mainloop()
