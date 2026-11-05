@@ -28,4 +28,6 @@ https://github.com/user-attachments/assets/cfc7cc0a-de94-4edf-a169-adb461ff6c29
 <video src="https://github.com/user-attachments/assets/cfc7cc0a-de94-4edf-a169-adb461ff6c29" controls="controls" muted="muted" style="max-height: 640px;">
   Your browser does not support the video tag.
 </video>
+
+![Polygon Artwork](Screenshot%202026-11-06%20000913.png)
 https://github.com/warakitworayuthanakarnLDC/Polygon-Artwork/blob/main/Screenshot%202026-11-06%20000913.png
