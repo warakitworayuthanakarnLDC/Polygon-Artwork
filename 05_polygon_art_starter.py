@@ -43,7 +43,7 @@ class polygon:
 
 
 polygons = []  # Hold references so the Polygon objects remain accessible.
-for _ in range(30):
+for _ in range(15):
     sides = rng.randint(3, 6)
     side_length = rng.randint(35, 120)
     x = rng.randint(-350, 260)
