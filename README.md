@@ -1,4 +1,4 @@
-﻿# Object-Oriented Polygon Art
+# Object-Oriented Polygon Art
 
 Student project using Python's `turtle` module and a student-designed `Polygon` class.
 
@@ -24,6 +24,6 @@ Do not include instructor solutions.
 ## STUDENT MODIFICATIONS AND WORK
 
 I have modified both files to be able to run without using polygon_shape.py.
-<video src="https://github.com/user-attachments/assets/raw/main/2026-11-06%2000-08-20.mp4" controls width="100%" style="max-width:850px;">
+<video src="[https://github.com/user-attachments/assets/raw/main/2026-11-06%2000-08-20.mp4](https://github.com/user-attachments/assets/cfc7cc0a-de94-4edf-a169-adb461ff6c29)" controls width="100%" style="max-width:850px;">
   Your browser does not support the video tag.
 </video>
