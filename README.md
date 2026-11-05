@@ -24,8 +24,3 @@ Do not include instructor solutions.
 ## STUDENT MODIFICATIONS AND WORK
 
 I have modified both files to be able to run without using polygon_shape.py.
-The screenshots and videos of both of the static art and the animated art are below.
-
-<video src="https://githubusercontent.com" controls="controls" style="max-width: 100%;">
-</video>
-
