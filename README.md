@@ -24,3 +24,6 @@ Do not include instructor solutions.
 ## STUDENT MODIFICATIONS AND WORK
 
 I have modified both files to be able to run without using polygon_shape.py.
+<video src="https://github.com/user-attachments/assets/raw/main/2026-11-06%2000-08-20.mp4" controls width="100%" style="max-width:850px;">
+  Your browser does not support the video tag.
+</video>
